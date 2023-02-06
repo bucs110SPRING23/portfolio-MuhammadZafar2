@@ -1,0 +1,15 @@
+import turtle
+pen= turtle.Turtle()
+window= turtle.Screen()
+pen.forward(70)
+# interface what can I tell it do abstact away the details
+# state a value of all its attributes
+
+pen.shape("turtle")
+pen.color('green')
+pen.speed(0)
+
+
+
+# has to be the last command for turtle
+window.exitonclick()
