@@ -13,3 +13,11 @@ pen.speed(0)
 
 # has to be the last command for turtle
 window.exitonclick()
+
+msg= "Enter 3 numbers"
+mynums=[]
+for i in [0,0,0]:
+    var=int(input(":"))
+    mynums.append(var)
+    print(mynums)
+print("all done")
