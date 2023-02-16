@@ -9,3 +9,10 @@
 mylist=[0]*100
 for _ in mylist:
     print("happy")
+
+import turtle
+wn.bg("green")
+dantello=turtle.Turtle()
+dantello.shape("turtle")
+
+colors=['red','purple','yellow']

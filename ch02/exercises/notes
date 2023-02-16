@@ -21,3 +21,8 @@ for i in [0,0,0]:
     mynums.append(var)
     print(mynums)
 print("all done")
+
+
+import pygame
+pygame.init()
+
