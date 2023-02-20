@@ -33,7 +33,8 @@ for x in range(10):
     michelangelo.forward(random_forward)
     random_forward=random.randrange(1,11)
     leonardo.forward(random_forward)
-    
+michelangelo.goto(-100,20)
+leonardo.goto(-100,-20)
 window.exitonclick()
 
 
