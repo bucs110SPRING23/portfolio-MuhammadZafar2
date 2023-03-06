@@ -163,26 +163,30 @@ for x in range(20):
 
 
 
-for i in results:
-    if i == True:
-        print("number of points")
+# for i in results[0]:
+#     if i == True:
+#         print("Number of points")
+True==1
+user1=results[0].count(True)
+user2=results[1].count(True)
+
 
 
 print(f"User1 made {results[0]} and User2 made {results[1]}")
 if results[0]>results[1]:
-    print("User1 won")
+    print(f"User1 won with {user1} score")
 elif results[0]<results[1]:
-    print("User2 won")
+    print(f"User2 won with {user2} score")
 else:
     print("It is tie")
 
-if result=='purple' and results[0]>results[1]:
+if result[0]=='purple' and results[0]>results[1]:
     print("You were correct about the winner")
 
-elif result=='purple' and results[0]<results[1]:
+elif result[0]=='purple' and results[0]<results[1]:
     print("You were wrong about the winner")
 
-elif result=='blue' and results[0]<results[1]:
+elif result[0]=='blue' and results[0]<results[1]:
     print("You were correct about the winner")
 
 else:
