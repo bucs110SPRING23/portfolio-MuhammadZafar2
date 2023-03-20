@@ -67,4 +67,4 @@ def main(length,width,radius):
     draw_lollipop(length,width,radius)
     window.exitonclick()
 
-main(50,100,50)
+main(50,150,75)
