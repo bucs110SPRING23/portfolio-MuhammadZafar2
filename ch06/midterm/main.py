@@ -5,10 +5,10 @@ def draw_handle(turtle,length,width):
     """
 
     Makes the handle of the lollipop
-    turtle object,used to draw
-    length parameter is the length of handle 
-    width parameter is a width of handle
-    returns the length and width parameter
+    turtle object used to draw
+    length parameter (float) is the length of handle 
+    width parameter (float) is a width of handle
+    returns (float) the length and width parameter
     
     """
     turtle.fillcolor("white")
@@ -23,9 +23,10 @@ def draw_handle(turtle,length,width):
 
 def draw_circle(turtle,handle_length,handle_width,radius):
     """
-    turtle object used to draw
-    handle_length/_width is the returned value from draw_handle
-    radius is added
+    draw_circle is made to make the lollipop candy using draw_handle function
+    turtle  : used to draw
+    handle_length/_width (float) is the returned value from draw_handle
+    radius (float) is added to make circle
     
     """
     turtle.fillcolor("red")
@@ -48,19 +49,20 @@ def draw_circle(turtle,handle_length,handle_width,radius):
 def draw_lollipop(length,width,radius):
 
     """
-    length, width, radius imputed to build the whole lollipop
+    this function just combines the draw_circle and draw_handle functions to make the whole lollipop
+    length, width, radius (float) inputed to build the whole lollipop
     
     
     """
-    handle_dimensions=draw_handle(turtle,length,width)  #is it okay to hard code it or ask the user?
+    handle_dimensions=draw_handle(turtle,length,width)  
     handle_width=handle_dimensions[1]
     handle_length=handle_dimensions[0]/2
     draw_circle(turtle,handle_length, handle_width,radius)
 
 
-def main(length,width,radius):                             #can we put parameters in main
+def main(length,width,radius):                             
     
-    window = turtle.Screen()   #Create a screen
+    window = turtle.Screen()   
     window.bgcolor('lightblue')
     draw_lollipop(length,width,radius)
     window.exitonclick()
