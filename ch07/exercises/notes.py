@@ -17,4 +17,4 @@ class Point:
 import point
 
 p1=point.Point()
-p1.x=10
+print(p1.xcoor, p1.ycoor, p1.color, type(p1))
