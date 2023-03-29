@@ -14,6 +14,6 @@ def cipher(text):
         letter_dict.append(new_letter)
     
         
-
+#%26=
 
 cipher(hyyhyhyh)

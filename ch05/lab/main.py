@@ -39,31 +39,30 @@ def graph_coordinates(objs_in_sequence):
     screen = pygame.display.set_mode((690,690))
     new_display = pygame.transform.flip(screen, False, True)
     width, height = new_display.get_size()
-    new_display = pygame.transform.scale(new_display, (width * 5, height * 5))
     
-    coordinates=threenp1range(10).items()
+    coordinates=threenp1range(10)
     start = (0,0)
-    for coord in coordinates:
-        pygame.draw.lines(new_display,"white",False, [start, coord])
-        start=coord
-    
-    screen.blit(new_display, (0, 0))
-    pygame.time.wait(1000)
-    # pygame.display.flip()
+    scale_coordinates={}
+    for x,y in coordinates.items():
+        scale_coordinates[x*8]=y*8
+    print(scale_coordinates.items())
+    pygame.draw.lines(screen,"white",False, list(scale_coordinates.items()))
+    new_display = pygame.transform.flip(screen, False, True)
+    pygame.font.init()
+    font = pygame.font.Font(None, 24)
     max_so_far=max(threenp1range(10).values())
-    # pygame.font.init()
-    # font = pygame.font.Font("italic", 12)
-    # msg = font.render(f"the {max_so_far} is the largest number of iterations", antialias, "blue")
-    # display.blit(msg, (0,0))
-
-graph_coordinates(threenp1range(10))
-
-
-# def graph_coordinates(objs_in_sequence):
-#    coordinates=objs_in_sequence.items()
-
-
+    msg = font.render(f"the {max_so_far} is the largest number of iterations", True, "blue")
+    new_display.blit(msg, (0,0))
+    screen.blit(new_display, (0, 0))
+    
+    pygame.display.flip()
+    pygame.time.wait(1000)
+    
+    
 def main():
-   threenp1()
+   
    dictionary=threenp1range(10)
    graph_coordinates(dictionary)
+
+
+main()
