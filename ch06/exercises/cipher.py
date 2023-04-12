@@ -3,17 +3,25 @@ list=[1,2,3,4,5]
 print(list[1:])
 print(list[:2])
 
-def cipher(text):
+def cipher():
+    text=input("phrase: ")
     alpha_list=['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
                  'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 
                  'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-    letter_dict={}
+    size=len(text)
     shift=3
-    for i in range(26):
-        new_letter=alpha_list[i+shift]
-        letter_dict.append(new_letter)
+    new_word=""
+    for i in range(size):
+        new_letter=alpha_list[alpha_list.index(text[i].upper())+shift %26]
+        
+
+        new_word+=new_letter
+    
+    return new_word
+    
+        
     
         
 #%26=
 
-cipher(hyyhyhyh)
+cipher()
