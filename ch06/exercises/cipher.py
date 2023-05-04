@@ -1,7 +1,7 @@
 
-list=[1,2,3,4,5]
-print(list[1:])
-print(list[:2])
+# list=[1,2,3,4,5]
+# print(list[1:])
+# print(list[:2])
 
 def cipher():
     text=input("phrase: ")
@@ -24,4 +24,4 @@ def cipher():
         
 #%26=
 
-cipher()
+print(cipher())
