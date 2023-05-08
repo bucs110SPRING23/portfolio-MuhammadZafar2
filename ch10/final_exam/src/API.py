@@ -22,7 +22,7 @@ def main():
     results_Nutrition=napi.get()
     
     for o in results_Nutrition:
-        #combine the incorrect and corrects into a single array
+        #combine two APIs into a single array
         if results_Nutrition!='Ayam Percik':
             answer= results_Meal['Dessert']
             answers = 'This food is called ' + results_Nutrition + ", and one of the types could be  "+ answer
@@ -35,7 +35,6 @@ def main():
             
             print(answers)
             
-        
         
         
 main()
