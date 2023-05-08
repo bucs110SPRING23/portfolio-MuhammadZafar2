@@ -54,18 +54,3 @@ class MealAPI:
 
 
 
-# class MealAPI:
-    
-#     def __init__(self):
-#         self.url = f'https://www.themealdb.com/api/json/v1/1/search.php'
-        
-#     def get_meal_by_name(self):
-#         #params = {'s': meal_name}
-#         r = requests.get(self.url, params=params)
-#         response = r.json()
-#         if response.get('categories'):
-#             meal = response['categories'][0]
-#             return meal['strMeal'], meal['strCategory'], meal['strArea'], meal['strInstructions'], meal['strMealThumb']
-#         else:
-#             return None
-# MealAPI.get_meal_by_name()
